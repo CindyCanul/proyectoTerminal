@@ -3,39 +3,34 @@
 %%
 %% Recuerda que aqu'i ya puedes escribir acentos como: 'a, 'e, 'i, etc.
 %% La letra n con tilde es: 'n.
-
 \chapter*{Planteamiento del problema}
 \addcontentsline{toc}{chapter}{Planteamiento del problema}
-
 \section*{Marco te'orico}
 \addcontentsline{toc}{section}{Marco te'orico}
-
-
 \subsection*{Cloud computing}
 \addcontentsline{toc}{subsection}{Cloud computing}
 
 
 El c'omputo en la nube es una tecnolog'ia emergente, la cual est'a compuesta por un grupo de recursos heterog'eneos que proveen servicios a trav'es de internet [5].
 Esta tecnolog'ia permite a los consumidores y negocios utilizar aplicaciones sin necesidad de instalaci'on y con acceso a sus archivos personales en cualquier computadora con acceso a internet. [10].
-
-El c'omputo en la nube se clasifica  de dos maneras:
+El c'omputo en la nube se puede clasificar de dos maneras:
 \begin{itemize}
-\item Ubicaci'on del C'omputo en la Nube.
-\item Tipo de servicios ofrecidos.
+\item Por la ubicaci'on: [10]
+	\begin{itemize}
+	\item \textbf{Nube P'ublica:} La infraestructura de c'omputo se puede compartir entre cualquier organizaci'on.
+	\item \textbf{Nube Privada:} La infraestructura de c'omputo es dedicata a una organizaci'on en particular y no se comparte con otras organizaciones.
+	\item \textbf{Nube H'ibrida:} Las organizaciones pueden albergar sus aplicaciones cr'iticas en nubes privadas y las aplicaciones con menos problemas de seguridad las puede albergar en nubes p'ublicas.
+	\end{itemize}
+\item Por el tipo de servicios ofrecidos: [5]
+	\begin{itemize}
+	\item \textbf{Infrastructure as a Service (IaaS):} En 'este nivel, la infraestructura se ofrece como servicio hacia los solicitantes en forma de M'aquinas Virtuales (VM).
+	\item \textbf{Platform as a Service (PaaS):} Es una plataforma de desarrollo de aplicaciones que se provee como servicio hacia los desarrolladores para crear aplicaciones basadas en web.
+	\item \textbf{Software as a Service (SaaS):} En 'este nivel el proveedor en la nube provee las aplicaciones de software.
+	\end{itemize}
 \end{itemize}
 
-De acuerdo a la ubicaci'on de la Nube podemos clasificar de la siguiente manera[10]:
-\begin{itemize}
-\item \textbf{Nube P'ublica:} La infraestructura de c'omputo se puede compartir entre cualquier organizaci'on.
-\item \textbf{Nube Privada:} La infraestructura de c'omputo es dedicata a una organizaci'on en particular y no se comparte con otras organizaciones.
-\item \textbf{Nube H'ibrida:} Las organizaciones pueden albergar sus aplicaciones cr'iticas en nubes privadas, y las aplicaciones con menos problemas de seguridad las puede albergar en nubes p'ublicas.
-\end{itemize}
-Adem'as podemos clasificar al c'omputo en la nube a partir de los servicios que ofrece [5]: 
-\begin{itemize}
-\item \textbf{Infrastructure as a Service (IaaS):} En 'este nivel, la infraestructura se ofrece como servicio hacia los solicitantes en forma de M'aquinas Virtuales (VM).
-\item \textbf{Platform as a Service (PaaS):} Es una plataforma de desarrollo de aplicaciones que se provee como servicio hacia los desarrolladores para crear aplicaciones basadas en web.
-\item \textbf{Software as a Service (SaaS):} En 'este nivel el proveedor en la nube provee las aplicaciones de software.
-\end{itemize}
+%%%%%
+%%%%%%%%% INSERTAR IMAGEN DEL DRIVE AQUI!
 
 \subsection*{Centro de Datos}
 \addcontentsline{toc}{subsection}{Centro de Datos}
@@ -44,27 +39,27 @@ Un centro de datos (datacenter) es un espacio dedicado donde las organizaciones 
 \subsection*{Esquemas de Distribuci'on de Trabajos}
 \addcontentsline{toc}{subsection}{Esquemas de Distribuci'on de Trabajos}
 
-La distribuci'on de trabajo (calendarizaci'on) es uno de los puntos principales adem'as de los m'as retadores problemas en el c'omputo en la nube[11] . Esta consiste en un conjunto de pol'iticas para controlar el orden en el cual los procesos ser'an ejecutados por el sistema [5].
+La distribuci'on de trabajo (calendarizaci'on) es uno de los puntos principales adem'as de los m'as retadores problemas en el c'omputo en la nube[11]. Esta consiste en un conjunto de pol'iticas para controlar el orden en el cual los procesos ser'an ejecutados por el sistema [5].
 
-Existen varios tipos de algoritmos de calendarizaci'on, su principal ventaja es obtener un alto rendimiento al cumplir con las tareas. Los principales ejemplos de algoritmos de calendarizaci'on son [6]:
+Existen varios tipos de algoritmos de calendarizaci'on, su principal ventaja es obtener un alto rendimiento al cumplir con las trabajos. Los principales ejemplos de algoritmos de calendarizaci'on son [6]:
 
 \begin{itemize}
-\item FCFS (First Come First Serve) Algorithm : significa que la tarea que llegue primero ser'a la primera en ser ejecutada.
-\item Round Robin Algorithm: Consiste en agregar un tiempo de ejecuci'on para cada tarea, si dicho tiempo se agota y la tarea actual no ha finalizado, pasa a un estado de espera y contin'ua con la siguiente tarea, al finalizar la 'ultima tarea, regresa a revisar si existen tareas en espera para proceder a ejecutarlas. 
-\item Min-Min Algorithm: Va ejecutando una por una iniciando por las tareas de menor tamaño.
-\item Max-Min Algorithm: Va ejecutando una por una iniciando por las tareas de mayor tamaño.
-\item Most fit task scheduling algorithm: Este algoritmo busca los elementos m'as aptos en la cola de tareas para ejecutarlo primero. Tiene un alto r'adio de error.
-\item Priority scheduling algorithm : La idea b'asica es que a cada proceso se le asigna una prioridad, y dependiendo a las prioridades de los dem'as procesos es c'omo se ejecutar'an cada uno de ellos.
+\item \textbf{FCFS (First Come First Serve) Algorithm:} significa que el trabajo que llegue primero ser'a el primero en ser ejecutado.
+\item \textbf{Round Robin Algorithm:} consiste en agregar un tiempo de ejecuci'on para cada trabajo, si dicho tiempo se agota y el trabajo actual no ha finalizado, pasa a un estado de espera y contin'ua con el siguiente trabajo, al finalizar el 'ultimo trabajo regresa a revisar si existen trabajos en espera para proceder a ejecutarlas. 
+\item  \textbf{Min-Min Algorithm:} se va ejecutando una por una iniciando por los trabajos de menor tamaño.
+\item  \textbf{Max-Min Algorithm:} se va ejecutando una por una iniciando por los trabajos de mayor tamaño.
+\item  \textbf{Most fit task scheduling algorithm:} este algoritmo busca los elementos m'as aptos en la cola de trabajos para ejecutarlo primero. Tiene un alto r'adio de error.
+\item Priority scheduling algorithm : la idea b'asica es que a cada proceso se le asigna una prioridad, y dependiendo a las prioridades de los dem'as procesos es c'omo se ejecutar'an cada uno de ellos.
 \end{itemize}
 
 \subsection*{Balanceo de Cargas}
 \addcontentsline{toc}{subsection}{Balanceo de Cargas}
 
-Dentro de nuestro entorno en la nube cada host tiene recursos de hardware finitos, y son susceptibles a fallos. Para mitigar contra las fallas y el exhaustivo uso de los recursos, los host son agrupados en clusters, los cuales son esencialmente un agrupamiento de recursos compartidos. El administrador (manager) es capaz de asegurarse que ninguno de los host dentro del cluster es responsable de todas las m'aquinas virtuales dentro de ese cluster [19].
+Dentro de nuestro entorno en la nube cada host tiene recursos de hardware finitos y son susceptibles a fallos. Para mitigar contra las fallas y el exhaustivo uso de los recursos, los host son agrupados en clusters, los cuales son esencialmente un agrupamiento de recursos compartidos. El administrador (manager) es capaz de asegurarse que ninguno de los host dentro del cluster es responsable de todas las m'aquinas virtuales dentro de ese cluster [19].
 
 Un entorno de virtualizaci'on responde a los cambios en la demanda para los recursos en cada host haciendo uso del balanceo de cargas, calendarizaci'on de trabajos y migraci'on.
 
-Una pol'itica de balanceo de cargas es configurada para un cluster, que a su vez contiene multiples hosts, cada uno de ellos con distintos recursos de hardware y disponibilidad de memoria. Red Hat Enterprise Virtualization Manager utiliza una pol'itica de balanceo de cargas para determinar en que host dentro del cluster se iniciar'a una m'aquina virtual para resolver las tareas [19].
+Una pol'itica de balanceo de cargas es configurada para un cluster, que a su vez contiene multiples hosts, cada uno de ellos con distintos recursos de hardware y disponibilidad de memoria. [19]
 Existen tres pol'iticas para el balanceo de cargas:
 \begin{itemize}
 \item Sin Balanceo.
@@ -80,7 +75,7 @@ La migraci'on se utiliza para hacer cumplir las pol'iticas dentro del balanceo d
 \subsection*{Sistemas ERP}
 \addcontentsline{toc}{subsection}{Sistemas ERP}
 
-La sigla ERP, en ingl'es Enterprise Resource Planning, significa Planificaci'on de los Recursos de la Empresa. Un sistema ERP constituye un marco de trabajo que incluye aplicaciones comerciales, administrativas (finanzas, contabilidad), recursos humanos, planeamiento de manufactura, y gesti'on de proyectos. [7]
+La sigla ERP, en ingl'es Enterprise Resource Planning, significa Planificaci'on de los Recursos de la Empresa. Un sistema ERP constituye un marco de trabajo que incluye aplicaciones comerciales, administrativas (finanzas, contabilidad), recursos humanos, planeamiento de manufactura y gesti'on de proyectos. [7]
 
 
 \section*{Antecedentes}
