@@ -18,7 +18,7 @@ El c'omputo en la nube se puede clasificar de dos maneras:
 \item Por la ubicaci'on: \cite{ahmed2012advanced}  
 	\begin{itemize}
 	\item \textbf{Nube P'ublica:} La infraestructura de c'omputo se puede compartir entre cualquier organizaci'on.
-	\item \textbf{Nube Privada:} La infraestructura de c'omputo es dedicata a una organizaci'on en particular y no se comparte con otras organizaciones.
+	\item \textbf{Nube Privada:} La infraestructura de c'omputo es dedicada a una organizaci'on en particular y no se comparte con otras organizaciones.
 	\item \textbf{Nube H'ibrida:} Las organizaciones pueden albergar sus aplicaciones cr'iticas en nubes privadas y las aplicaciones con menos problemas de seguridad las puede albergar en nubes p'ublicas.
 	\end{itemize}
 \item Por el tipo de servicios ofrecidos: \cite{agarwal2014efficient}
@@ -52,10 +52,10 @@ Existen varios tipos de algoritmos de calendarizaci'on, su principal ventaja es 
 \begin{itemize}
 \item \textbf{FCFS (First Come First Serve) Algorithm:} significa que el trabajo que llegue primero ser'a el primero en ser ejecutado.
 \item \textbf{Round Robin Algorithm:} consiste en agregar un tiempo de ejecuci'on para cada trabajo, si dicho tiempo se agota y el trabajo actual no ha finalizado, pasa a un estado de espera y contin'ua con el siguiente trabajo, al finalizar el 'ultimo trabajo regresa a revisar si existen trabajos en espera para proceder a ejecutarlas. 
-\item  \textbf{Min-Min Algorithm:} se va ejecutando una por una iniciando por los trabajos de menor tamaño.
-\item  \textbf{Max-Min Algorithm:} se va ejecutando una por una iniciando por los trabajos de mayor tamaño.
+\item  \textbf{Min-Min Algorithm:} se va ejecutando una por una iniciando por los trabajos de menor tama'no.
+\item  \textbf{Max-Min Algorithm:} se va ejecutando una por una iniciando por los trabajos de mayor tama'no.
 \item  \textbf{Most fit task scheduling algorithm:} este algoritmo busca los elementos m'as aptos en la cola de trabajos para ejecutarlo primero. Tiene un alto r'adio de error.
-\item Priority scheduling algorithm : la idea b'asica es que a cada proceso se le asigna una prioridad, y dependiendo a las prioridades de los dem'as procesos es c'omo se ejecutar'an cada uno de ellos.
+\item \textbf{Priority scheduling algorithm:} la idea b'asica es que a cada proceso se le asigna una prioridad, y dependiendo a las prioridades de los dem'as procesos es c'omo se ejecutar'an cada uno de ellos.
 \end{itemize}
 
 \subsection*{Balanceo de Cargas}
@@ -87,9 +87,9 @@ La sigla ERP, en ingl'es Enterprise Resource Planning, significa Planificaci'on 
 \section*{Antecedentes}
 \addcontentsline{toc}{section}{Antecedentes}
 
-El c'omputo en la nube es una tecnolog'ia que ha abarcado gran parte de los negocios  para dar soporte a ellos. Ésta tecnolog'ia provee a los negocios una ventaja competitiva en los costos de recursos como se ve en los negocios tradicionales, adem'as de la versatilidad que provee al ajustarse a la necesidad de las empresas. \cite{srinivasan2014cloud}
+El c'omputo en la nube es una tecnolog'ia que ha abarcado gran parte de los negocios  para dar soporte a ellos. 'Esta tecnolog'ia provee a los negocios una ventaja competitiva en los costos de recursos como se ve en los negocios tradicionales, adem'as de la versatilidad que provee al ajustarse a la necesidad de las empresas. \cite{srinivasan2014cloud}
 
-La tecnolog'ia en la nube ha desarrollado una infraestructura fuerte despu'es del surgimiento del c'omputo distribuido.\cite{chen2009cloud} Para obtener las ventajas de dicha tecnolog'ia los usuarios simplemente necesitar'an conectarse a internet y de esta manera tendr'an el acceso al procesamiento de manera remota.\cite{aranganathan2011aco} Sin embargo, para aprovechar el m'aximo potencial de 'estos recursos, es necesario tener en consideraci'on algunas variables,ya que en un entorno en la nube existe un comportamiento din'amico de los recursos a manera que se les provea a los usuarios el servicio.\cite{shimpy2014different}
+La tecnolog'ia en la nube ha desarrollado una infraestructura fuerte despu'es del surgimiento del c'omputo distribuido.\cite{chen2009cloud} Para obtener las ventajas de dicha tecnolog'ia los usuarios simplemente necesitar'an conectarse a internet y de esta manera tendr'an el acceso al procesamiento de manera remota.\cite{aranganathan2011aco} Sin embargo, para aprovechar el m'aximo potencial de 'estos recursos, es necesario tener en consideraci'on algunas variables, ya que en un entorno en la nube existe un comportamiento din'amico de los recursos a manera que se les provea a los usuarios el servicio.\cite{shimpy2014different}
 Una de las pr'acticas con mayor importancia en la nube es la calendarizaci'on, ya que tiene como objetivo administrar las tareas del centro de datos para optimizar los recursos del mismo. De esta manera la eficiencia de la carga de trabajo en la nube aumenta.\cite{shimpy2014different}
 En general, el objetivo de la calendarizaci'on en la nube es utilizar los recursos de manera apropiada, mientras la carga de trabajo es distribuida uniformemente para mejorar los tiempos de ejecuci'on.\cite{shimpy2014different}
 
@@ -116,9 +116,10 @@ Existen una gran variedad de algoritmos utilizados en el problema de distribuci'
 \addcontentsline{toc}{section}{Estado del arte}
 
 Los siguientes algoritmos de calendarizaci'on actualmente est'an prevaleciendo en la nube:
-Resource-Aware-Scheduling Algorithm (RASA) :  Parsa, Entezari-Maleki (2009) proponen el algoritmo RASA, el cual utiliza las ventajas de dos algoritmos tradicionales (Max-min y Min-min) y cubre sus desventajas. Aunque el tiempo limite, la tasa de llegada, costo de ejecucion y costo de comunicaci'on no est'an considerados. \cite{parsa2009rasa}.
-
 \begin{itemize}
+\item Resource-Aware-Scheduling Algorithm (RASA): Parsa, Entezari-Maleki (2009) proponen el algoritmo RASA, el cual utiliza las ventajas de dos algoritmos tradicionales (Max-min y Min-min) y cubre sus desventajas. Aunque el tiempo limite, la tasa de llegada, costo de ejecucion y costo de comunicaci'on no est'an considerados. \cite{parsa2009rasa}.
+
+
 \item RSDC (Reliable Scheduling Distributed In Cloud Computing): Delevar, Javanmard, Shabestari y Talebi (2012) proponen un algoritmo confiable en un entorno en la nube, en este algoritmo los trabajos importantes son divididos en sub trabajos, de tal manera que se puedan balancear las peticiones \cite{delavar2012rsdc}.
 
 
