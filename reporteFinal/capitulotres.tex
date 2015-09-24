@@ -9,7 +9,7 @@ En 'este cap'itulo se describir'an los resultados obtenidos en modelado y simula
 
 
 
-\vspace{10em} 
+\vspace{20em} 
 
 \section{Tiempo de ejecuci'on y costo de procesamiento}
 
@@ -50,6 +50,7 @@ Como se puede apreciar en el Cuadro 3.2, cada host tuvo 2048 Mb de memoria RAM, 
 	\end{tabular}
 \end{table}
 
+ 
 \begin{table}[!hbt]
 	\centering
 	\caption{Virtual Machine, Fuente: Elaboraci'on propia.}
@@ -65,12 +66,6 @@ Como se puede apreciar en el Cuadro 3.2, cada host tuvo 2048 Mb de memoria RAM, 
 \end{table}
 
 
-En el Cuadro 3.3 se muestran los par'ametros que se consider'o para las m'aquinas virtuales, donde cada VM tendr'a 10 GB de almacenamiento, 512 MB  o 1 GB seleccionado de manera aleatoria, adem'as para la caracter'istica del procesador se tiene  la propiedad MIPS (million instructions per second) con 250 'o 500 y un ancho de banda de 1000 kb/s.
-
-Para la configuraci'on de las tareas, se tom'o el tama'no con un intervalo de 1 kb a 10 kb,  el par'ametro fileSize, que representa el tama'no del archivo de entrada, va de 300 b a 1.8 kb as'i como el archivo de salida, como par'ametro final se tiene los MIPS que ir'an de 1 a 3 (Cuadro 3.4).
-
-
-
 \begin{table}[!hbt]
 	\centering
 	\caption{Configuraci'on Cloudlet, Fuente: Elaboraci'on propia.}
@@ -84,6 +79,15 @@ Para la configuraci'on de las tareas, se tom'o el tama'no con un intervalo de 1 
 		length           & 1000 kb/s      
 	\end{tabular}
 \end{table}
+
+
+En el Cuadro 3.3 se muestran los par'ametros que se consider'o para las m'aquinas virtuales, donde cada VM tendr'a 10 GB de almacenamiento, 512 MB  o 1 GB seleccionado de manera aleatoria, adem'as para la caracter'istica del procesador se tiene  la propiedad MIPS (million instructions per second) con 250 'o 500 y un ancho de banda de 1000 kb/s.
+
+Para la configuraci'on de las tareas, se tom'o el tama'no con un intervalo de 1 kb a 10 kb,  el par'ametro fileSize, que representa el tama'no del archivo de entrada, va de 300 b a 1.8 kb as'i como el archivo de salida, como par'ametro final se tiene los MIPS que ir'an de 1 a 3 (Cuadro 3.4).
+
+
+
+
 
 \begin{figure}[H] 
 	\caption{Promedio tiempo de ejecuci'on con tareas 100-500, Fuente: Elaboraci'on propia.}
@@ -102,9 +106,8 @@ En la figura 3.1, se puede observar el promedio del tiempo de ejecuci'on en \emp
 
 El costo de procesamiento, de acuerdo a cada algoritmo, se puede observar en la figura 3.2, en donde el algoritmo FCFS tiene un incremento dr'astico al realizar la prueba con 500 tareas. El algoritmo Max-Min se conserv'o sin muchos cambios apesar de la cantidad de tareas, mientras que Min-Min tiene un menor costo de procesamiento cuando las tareas son inferiores a 300.
 
-\vspace{10em} 
 
-\begin{figure}[H] 
+\begin{figure}[h] 
 	\caption{Tiempo ejecuci'on 50 muestras FCFS, Fuente: Elaboraci'on propia}
 	\centering
 	\includegraphics[scale=0.5]{media/fcfs}
