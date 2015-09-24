@@ -1,7 +1,7 @@
 \chapter{Desarrollo}
 \section*{Introducci'on}
 
-En 'este cap'itulo se muestra la arquitectura de los distintos esquemas de calendarizaci'on de trabajos en un entorno en la nube, para la implementaci'on de dichos esquemas se hace uso de un framework llamado CloudSim, el cual será definido de igual manera.
+En 'este cap'itulo se muestra la arquitectura de los distintos esquemas de calendarizaci'on de trabajos en un entorno en la nube, para la implementaci'on de dichos esquemas se hace uso de un framework llamado CloudSim, el cual ser'a definido de igual manera.
 
 
 
@@ -10,7 +10,7 @@ En 'este cap'itulo se muestra la arquitectura de los distintos esquemas de calen
 \addcontentsline{toc}{section}{Introducci'on}
 \section{Aplicaci'on del marco metodol'ogico y de actividades de experimentaci'on}
 
-En base de los dos primeros puntos descritos anteriormente en el marco metodol'ogico se realizar'on las siguientes activides:
+En base de los dos primeros puntos descritos anteriormente en el marco metodol'ogico se realizar'on las siguientes actividades:
 
 \begin{itemize}
 	\item \textbf{Simular:} Se implementar'a a manera de simulaci'on un centro de datos con un entorno en la nube, las m'aquinas virtuales y el servidor inicializador que lo conforman.
@@ -58,8 +58,7 @@ De los algoritmos mencionados anteriormente, se presentan los siguientes:
 En un entorno de trabajo normal, la forma descrita anteriormente la podemos ver de la siguiente manera:
 
 \begin{figure}
-	\caption{Esquema de trabajo de algoritmos de calendarizaci'on
-		Fuente: Elaboraci'on propia.}
+	\caption{Esquema de trabajo de algoritmos de calendarizaci'on, Fuente: Elaboraci'on propia.}
 	\centering
 	\includegraphics[scale=0.5]{media/imagendos}
 \end{figure}
@@ -100,32 +99,41 @@ De manera similar tenemos los siguientes algoritmos min-min y max-min:
 Est'as son algunas capturas del c'odigo para la implementaci'on de los primeros algoritmos, el centro de datos:
 
 \subsection*{Configuración de Elementos del Datacenter}
+\addcontentsline{toc}{section}{Configuración de Elementos del Datacenter}
 
-\begin{figure}
+\begin{figure}[h]
 	\caption{Características del datacenter. Fuente: Elaboración propia}
 	\centering
 	\includegraphics[scale=0.5]{media/caracteristicas_datacenter}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 	\caption{Características del Host. Fuente: Elaboración propia}
 	\centering
 	\includegraphics[scale=0.5]{media/caracteristicas_host}
 \end{figure}
 
-\begin{figure}
+
+\begin{figure}[h]
 	\caption{Características de las máquinas virtuales. Fuente: Elaboración propia}
 	\centering
 	\includegraphics[scale=0.3]{media/creacion_vm}
 \end{figure}
 
-\begin{figure}
+
+\begin{figure}[h]
 	\caption{Características de las Tareas (cloudlets). Fuente: Elaboración propia}
 	\centering
 	\includegraphics[scale=0.5]{media/creacion_cloudlet}
-\end{figure}
+\end{figure} 
+
+%%%
+
+
 
 \subsection*{DatacenterBrokers para Algoritmos de Calendarización}
+\addcontentsline{toc}{section}{DatacenterBrokers para Algoritmos de Calendarización}
+
 
 \begin{figure}
 	\caption{FCFS Broker. Fuente: Elaboración propia}
@@ -133,13 +141,15 @@ Est'as son algunas capturas del c'odigo para la implementaci'on de los primeros 
 	\includegraphics[scale=0.5]{media/FCFS_broker}
 \end{figure}
 
-\begin{figure}
+
+
+\begin{figure}[h]
 	\caption{Min-Min Broker. Fuente: Elaboración propia}
 	\centering
 	\includegraphics[scale=0.5]{media/minmin_broker}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 	\caption{Max-min Broker. Fuente: Elaboración propia}
 	\centering
 	\includegraphics[scale=0.5]{media/maxmin_broker}
