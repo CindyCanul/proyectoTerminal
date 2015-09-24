@@ -1,7 +1,7 @@
 \chapter{Desarrollo}
 \section*{Introducci'on}
 
-En 'este cap'itulo se muestra la arquitectura de los distintos esquemas de calendarizaci'on de trabajos en un entorno en la nube, para la implementaci'on de dichos esquemas hace uso de un framework llamado CloudSim, el cual será definido de igual manera.
+En 'este cap'itulo se muestra la arquitectura de los distintos esquemas de calendarizaci'on de trabajos en un entorno en la nube, para la implementaci'on de dichos esquemas se hace uso de un framework llamado CloudSim, el cual será definido de igual manera.
 
 
 \newpage
@@ -19,21 +19,22 @@ En base de los dos primeros puntos descritos anteriormente en el marco metodol'o
 
 \subsection{Simulaci'on del Centro de Datos en la Nube}
 
- \textbf{Cloudsim} es un nuevo, generalizado y extensible framework de simulaci'on, que permite el modelaje, simulaci'on y experimentaci'on de infraestructuras emergentes de c'omputo en la nube y servicios de aplicaci'on. (Calheiros et al, 2010, p.2).
+ \textbf{Cloudsim} es un nuevo, generalizado y extensible framework de simulaci'on, que permite el modelaje, simulaci'on y experimentaci'on de infraestructuras emergentes de c'omputo en la nube y servicios de aplicaci'on (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, p. 2).
 
-Entre los componentes que proporciona dicho framework se encuentran los siguientes (Calheiros et al, 2010, cap. 4):
+Entre los componentes que proporciona dicho framework se encuentran los siguientes:
 
 \begin{itemize}
-	\item  \textbf{Cloudlet:} Esta clase modela las aplicaciones de servicio basadas en la nube como pueden ser env'io de contenido, redes sociales, y flujo de trabajo empresarial.
-	\item  \textbf{Datacenter:} Esta clase modela el nucleo de los servicios en un nivel de infraestructura (hardware) que son ofrecidos por Cloud Providers (Amazon, Azure, App Engine). Estos son encapsulados en un conjunto de host que pueden ser homogeneos o heterogeneos con respecto a sus configuraciones de hardware (memoria, n'ucleos, capacidad, y almacenamiento).
-	\item  \textbf{DatacenterBroker:} Esta clase modela un broker, el cual es responsable de mediar las negociaciones entre el SaaS y los Cloud providers; y dichas negociaciones son manejadas por los requerimientos QoS.
-	\item  \textbf{Host:} Esta clase modela los recursos físicos como una computadora o un servidor de almacenamiento.
-	\item  \textbf{Vm:} Esta clase modela una M'aquina Virtual (VM), la cual es adinistrada y hosteada por un componente host en la nube. Cada VM tiene acceso a un componente que almacena las siguientes características relacionadas a una VM: memoria accesible, procesador, tama'no de almacenamiento.
+	\item  \textbf{Cloudlet:} Esta clase modela las aplicaciones de servicio basadas en la nube como pueden ser env'io de contenido, redes sociales, y flujo de trabajo empresarial (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, cap. 4).
+	\item  \textbf{Datacenter:} Esta clase modela el nucleo de los servicios en un nivel de infraestructura (hardware) que son ofrecidos por Cloud Providers (Amazon, Azure, App Engine). Estos son encapsulados en un conjunto de host que pueden ser homogeneos o heterogeneos con respecto a sus configuraciones de hardware (memoria, n'ucleos, capacidad, y almacenamiento) (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, cap. 4).
+	\item  \textbf{DatacenterBroker:} Esta clase modela un broker, el cual es responsable de mediar las negociaciones entre el SaaS y los Cloud providers; y dichas negociaciones son manejadas por los requerimientos QoS (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, cap. 4).
+	\item  \textbf{Host:} Esta clase modela los recursos f'isicos como una computadora o un servidor de almacenamiento (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, cap. 4).
+	\item  \textbf{Vm:} Esta clase modela una M'aquina Virtual (VM), la cual es administrada y hosteada por un componente host en la nube. Cada VM tiene acceso a un componente que almacena las siguientes características relacionadas a una VM: memoria accesible, procesador, tama'no de almacenamiento (\citeauthor{calheiros2011cloudsim}, \citeyear{calheiros2011cloudsim}, cap. 4).
 \end{itemize}
 
 
+
 \begin{figure}
-	\caption{Estilo de Trabajo de Cloudsim, Fuente: Chatterjee et al.}
+	\caption{Estilo de Trabajo de CloudSim, Fuente: Chatterjee et al.}
 	\centering
 	\includegraphics[scale=0.5]{media/imagenuno}
 \end{figure}
@@ -41,9 +42,11 @@ Entre los componentes que proporciona dicho framework se encuentran los siguient
 
 \subsection{Implementaci'on de los Algoritmos}
 
-Existen varios algoritmos para calendarizar los trabajos en el c'omputo en la nube. La mayor ventaja de estos algoritmos es obtener el mayor rendimiento. Los principales ejemplos de algoritmos de calendarizaci'on son: FCFS, Round Robin, Min-Min, Max-Min y algoritmos de meta heurísticas.(Shimpy y Jagandeep, 2014, p. 1).
+Existen varios algoritmos para calendarizar los trabajos en el c'omputo en la nube. La mayor ventaja de estos algoritmos es obtener el mayor rendimiento. Los principales ejemplos de algoritmos de calendarizaci'on son: FCFS, Round Robin, Min-Min, Max-Min y algoritmos de meta heurísticas  (\citeauthor{shimpy2014different}, \citeyear{shimpy2014different}, p. 1).
 
-De los algoritmos mencionados anteriormente en 'este trabajo se presentan los siguientes:
+
+
+De los algoritmos mencionados anteriormente, se presentan los siguientes:
 
 
 \begin{itemize}
@@ -63,7 +66,7 @@ En un entorno de trabajo normal, la forma descrita anteriormente la podemos ver 
 
 
 \newpage
-Sin embargo, en un entorno en la nube al ser m'ultiples m'aquinas virtuales alojadas en distintos hosts que a su vez pueden formar parte de uno o más datacenters dicho esquema tiene que ser adaptado para poder adoptar un estilo de trabajo similar al proporcionado por nuestro framework, por lo que los resultados quedan de la distinta manera:
+Sin embargo en un entorno en la nube, al ser m'ultiples m'aquinas virtuales alojadas en distintos hosts, que a su vez pueden formar parte de uno o m'as datacenters, dicho esquema tiene que ser adaptado para poder adoptar un estilo de trabajo similar al proporcionado por el framework, por lo que los resultados quedan de la distinta manera:
 
 \begin{figure}
 	\caption{Arquitectura FCFS para un entorno en la nube. Fuente: Elaboración propia.}
@@ -71,7 +74,9 @@ Sin embargo, en un entorno en la nube al ser m'ultiples m'aquinas virtuales aloj
 	\includegraphics[scale=0.5]{media/imagentres}
 \end{figure}
 
-Como podemos apreciar en el diagrama, podemos tener m usuarios ejecutando \emph{n} tareas, sin embargo la asignaci'on de m'aquinas virtuales va dependiendo del orden de llegada de dichas tareas, y quien se encarga de repartir las tareas es el datacenterBroker.
+
+
+Como podemos apreciar en el diagrama, podemos tener \emph{m} usuarios ejecutando \emph{n} tareas, sin embargo la asignaci'on de m'aquinas virtuales va dependiendo del orden de llegada de dichas tareas, y quien se encarga de repartir las tareas es el datacenterBroker.
 
 De manera similar tenemos los siguientes algoritmos min-min y max-min:
 
