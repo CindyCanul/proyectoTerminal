@@ -46,6 +46,8 @@
 \usepackage{booktabs}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
+\usepackage{natbib} % apa normal
+%\usepackage[numbers]{natbib} %apa con numeros
 %\usepackage[a4paper,margin=1in,landscape]{geometry}
 
 %% # Datos del documento #
@@ -114,9 +116,12 @@
 \include{capitulotres}
 \include{conclusion}
 
+\bibliographystyle{apalike}
+%\bibliographystyle{apalike} %apa con numeros
+
 \bibliography{biblio}
 %\renewcommand{\refname}{biblio}
-\bibliographystyle{plainnat}
+
 
 \include{glosario} 
 \include{anexo} 
