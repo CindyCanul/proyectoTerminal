@@ -61,22 +61,20 @@ De los algoritmos mencionados anteriormente, se presentan los siguientes:
 	\item \textit{\textbf{Round Robin:}} Ejecuta las tareas en orden de llegada, si el número de tarea actual es mayor al número de máquinas virtuales reinicia el ciclo de asignación hacía la primera máquina virtual.
 \end{itemize}
 
-En un entorno de trabajo normal, la forma descrita anteriormente para los algoritmos de \textit{FCFS, Min-Min y Max-Min} lo podemos apreciar de la siguiente manera, Figura (\ref{fig:cuatro}):
+En un entorno de trabajo normal, la forma descrita anteriormente para los algoritmos de \textit{FCFS, Min-Min, Max-Min y Round Robin} lo podemos apreciar de la siguiente manera, Figura (\ref{fig:cuatro}):
 
 
 %\setcounter{figure}{3}
 \renewcommand\thefigure{\arabic{figure}}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.7]{media/imagendos}
+	\includegraphics[scale=0.4]{media/NuevoEsquema}
 	\caption{Esquema de trabajo de algoritmos de calendarizaci'on, Fuente: Elaboraci'on propia.}
 	\label{fig:cuatro}
 \end{figure}
 
 
 Sin embargo en un entorno en la nube, al ser m'ultiples m'aquinas virtuales alojadas en distintos \textit{hosts}, que a su vez pueden formar parte de uno o m'as \textit{datacenters}, dicho esquema tiene que ser modificado para poder adoptar un estilo de trabajo similar al proporcionado por el \textit{framework}, por lo que los resultados quedan de la distinta manera:
-
-\newpage
 
 %\setcounter{figure}{4}
 \renewcommand\thefigure{\arabic{figure}}
