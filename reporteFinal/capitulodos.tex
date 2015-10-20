@@ -58,9 +58,10 @@ De los algoritmos mencionados anteriormente, se presentan los siguientes:
 	\item \textit{\textbf{FCFS:}} Ejecuta las tareas en orden de llegada, es decir, el primero en llegar es el primero en ser atendido.
 	\item \textit{\textbf{Min-Min:}} Selecciona las tareas m'as pequeñas para ser ejecutadas primero.
 	\item  \textit{\textbf{Max-Min:}} Selecciona las tareas m'as grandes para ser ejecutadas primero.
+	\item \textit{\textbf{Round Robin:}} Ejecuta las tareas en orden de llegada, si el número de tarea actual es mayor al número de máquinas virtuales reinicia el ciclo de asignación hacía la primera máquina virtual.
 \end{itemize}
 
-En un entorno de trabajo normal, la forma descrita anteriormente la podemos ver de la siguiente manera, Figura (\ref{fig:cuatro}):
+En un entorno de trabajo normal, la forma descrita anteriormente para los algoritmos de \textit{FCFS, Min-Min y Max-Min} lo podemos apreciar de la siguiente manera, Figura (\ref{fig:cuatro}):
 
 
 %\setcounter{figure}{3}
@@ -113,6 +114,17 @@ Para el algoritmo de \textit{Min-Min} (Figura: \ref{fig:min}) obtenemos la lista
 \end{figure}
 
 En la figura \ref{fig:max} tenemos el algoritmo de \textit{Max-Min} el cual ordena la lista de tareas de mayor a menor tamaño antes de asignarlas a las máquinas virtuales, una vez ordenada dicha lista procede a asignar la tarea más grande en la primera máquina, la siguiente en la segunda y así sucesivamente hasta terminar la asignación de las tareas.
+
+\newpage
+\renewcommand\thefigure{\arabic{figure}}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.4]{media/RRAlgorithm}
+	\caption{Arquitectura de \textit{Round Robin} para un entorno en la nube. Fuente: Elaboraci'on propia.}
+	\label{fig:RRAlgorithm}
+\end{figure}
+
+Como podemos apreciar en la figura \ref{fig:RRAlgorithm}, las tareas se van ejecutando de manera que llegan pero al momento de ser mayor el número de tarea la asigna en la máquina virtual principal, esta operación de asignación la podemos expresar de la siguiente manera: $$C_n \rightarrow Vm_{n \% m}$$ donde $C_n$ representa la $n$-ésima tarea y $m$ es el número total de máquinas virtuales.
 
 \newpage 
 
@@ -223,5 +235,18 @@ En la Figura: \ref{fig:sortRevert} tenemos la implementación de los métodos de
 	\caption{\textit{Algoritmos de Ordenamientos}. Fuente: Elaboración propia}
 	\label{fig:sortRevert}
 \end{figure}
+
+\renewcommand\thefigure{\arabic{figure}}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.4]{media/RRBroker}
+	\caption{\textit{Round Robin Broker}. Fuente: Elaboración propia}
+	\label{fig:RRBroker}
+\end{figure}
+
+En la Figura: \ref{fig:RRBroker} se muestra la implementación del \textit{Broker} para el algoritmo de \textit{Round Robin}, en el cual se hace una variación con respecto al \textit{Quantum} de tiempo hacia disponibilidad de ancho de banda de la máquina virtual.
+
+
+
 
 %ver la seccion anexo
